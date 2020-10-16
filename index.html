@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aos.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="first-backgraund"></div>
     <header class="main-header">
         <nav>
             <ul class="main-header-list">
@@ -18,17 +20,22 @@
                 <li class="main-header-list-item"><a href="#">Контакты</a></li>
             </ul>
         </nav>
-
+        <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
         <div class="contact-info">
+
             <div class="contact-item-wrapper">
-                <a href="tel+33-33-33-33-33" class="content-info-item">+33-33-33-33-33</a>
+                <a href="tel:+33-33-33-33-33" class="content-info-item">+33-33-33-33-33</a>
                 <svg class="icon">
                     <use xlink:href="./img/sprite.svg#phone-icon"></use>
                 </svg>
                 
             </div>
             <div class="contact-item-wrapper">
-                <a href="mailto:mail@admin.ru" class="content-info-item">mail@admin.ru</a> 
+                <a href="mailto:mail@admin.ru" class="content-info-item">something@gmail.ru</a> 
                 <svg class="icon">
                     <use xlink:href="./img/sprite.svg#email-icon"></use>
                 </svg>       
@@ -37,73 +44,73 @@
     </header>
     <main>
             <section class="more">
-                <div class="main-wrapper">
+                <div class="main-wrapper" data-aos="fade-down">
                     <h1>Юридические услуги</h1>
                     <a href="#" class="more-link">Узнать больше</a>                    
                 </div>
 
             </section>
-
             
-            <section class="about-me">
-                    <div class="adv-wrapper">
-                        <div class="advantages">
-                            <div class="advantages-item-wrapper">
-                                <div class="advantages-item">
-                                    <div class="advatages-item-icon-wrapper">
-                                        <svg class="advatages-item-icon">
-                                            <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
-                                        </svg>
+                <section class="about-me">
+                    <!-- <svg class="large-red-spot">
+                        <use xlink:href="./img/sprite.svg#large-red-spot"></use>
+                    </svg> -->
+                        <div class="adv-wrapper">
+                            <div class="advantages">
+                                <div class="advantages-item-wrapper">
+                                    <div class="advantages-item" data-aos="fade-right">
+                                        <div class="advatages-item-icon-wrapper">
+                                            <svg class="advatages-item-icon">
+                                                <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="advantages-item-text" data-mother="f">Advantage</p>
                                     </div>
-                                    <p class="advantages-item-text">Advantage</p>
-                                </div>
-                                <div class="advantages-item">
-                                    <div class="advatages-item-icon-wrapper">
-                                        <svg class="advatages-item-icon">
-                                            <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
-                                        </svg>
+                                    <div class="advantages-item" data-aos="zoom-in">
+                                        <div class="advatages-item-icon-wrapper">
+                                            <svg class="advatages-item-icon">
+                                                <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="advantages-item-text">Advantage</p>
                                     </div>
-                                    <p class="advantages-item-text">Advantage</p>
-                                </div>
-                                <div class="advantages-item">
-                                    <div class="advatages-item-icon-wrapper">
-                                        <svg class="advatages-item-icon">
-                                            <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
-                                        </svg>
+                                    <div class="advantages-item" data-aos="fade-left">
+                                        <div class="advatages-item-icon-wrapper">
+                                            <svg class="advatages-item-icon">
+                                                <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="advantages-item-text">Advantage</p>
                                     </div>
-                                    <p class="advantages-item-text">Advantage</p>
                                 </div>
                             </div>
                         </div>
+                        <div class="about-me-wrapper">
+                            <section class="about-me-photo" data-aos="fade-right" data-aos-offset="100">
+                                <picture>
+                                    <source srcset="./img/image-1.webp" type="image/webp">
+                                        <img src="./img/image-1.png" alt="" class="">
+                                </picture>
+                            </section>
+                            <section class="about-me-info" data-aos="fade-left" >
+                                <h2 class="about-me-info-header">Обо мне</h2>
+                                <p class="about-me-info-subheader">Lorem ipsum dolor sit amet, <span>consectetur</span></p>
+                                <p class="about-me-info-text">Lorem iem ipsum dem ipsum dolor sit amet, consectetur adem ipsum dolor sit amet, consectetur adolorem ipsum dolor sit amet, consectetur adem ipsum dolor sit amet, consectetur ad sit amet, consectetur adem ipsum dolor sit amet, consectetur adem ipsum dolor sit amet, consectetur adpsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <button class="about-me-btn">Читать</button>
+                            </section>
+                        </div>
                     </div>
-                    <div class="about-me-wrapper">
-                        <section class="about-me-photo">
-                            <picture>
-                                <source srcset="./img/image-1.webp" type="image/webp">
-                                    <img src="./img/image-1.png" alt="" class="">
-                            </picture>
-                        </section>
-                        <section class="about-me-info">
-                            <h2 class="about-me-info-header">Обо мне</h2>
-                            <p class="about-me-info-subheader">Lorem ipsum dolor sit amet, <span>consectetur</span></p>
-                            <p class="about-me-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <button class="about-me-btn">Читать</button>
-                        </section>
-                    </div>
-                </div>
-                <!-- <svg class="about-me-decor">
-                    <use xlink:href="./img/sprite.svg#about-me-decor" ></use>
-                </svg> -->
-            </section>
+        
+                </section>
             
             <section class="services">
-                <div class="services-header-wrapper">
+                <div class="services-header-wrapper" data-aos="fade-up">
                     <h2 class="services-header">Какие <span>услуги</span> я предоставляю?</h2>
                     <p class="services-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>                   
                 </div>
 
                 <div class="services-variaty">
-                    <div class="services-variaty-item">
+                    <div class="services-variaty-item" data-aos="fade-down-right">
                         <div class="services-variaty-item-icon-wrapper">
                             <svg class="services-variaty-item-icon">
                                 <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
@@ -112,7 +119,7 @@
                         <h3 class="serveces-variaty-item-header">Персональное внимание</h3>
                         <p class="serveces-variaty-item-text">Lorem ipsum dolor sit amet, consectetur</p>
                     </div>
-                    <div class="services-variaty-item">
+                    <div class="services-variaty-item" data-aos="zoom-in">
                         <div class="services-variaty-item-icon-wrapper">
                             <svg class="services-variaty-item-icon">
                                 <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
@@ -121,7 +128,7 @@
                         <h3 class="serveces-variaty-item-header">Персональное внимание</h3>
                         <p class="serveces-variaty-item-text">Lorem ipsum dolor sit amet, consectetur</p>
                     </div>
-                    <div class="services-variaty-item">
+                    <div class="services-variaty-item" data-aos="fade-up-left">
                         <div class="services-variaty-item-icon-wrapper">
                             <svg class="services-variaty-item-icon">
                                 <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
@@ -132,37 +139,216 @@
                     </div>
                 </div>
             </section>
-            <section class="news">
-                <h2 class="new-header">Последние <span>новости</span></h2>
+            <section class="news" data-aos="fade-up">
+                <div class="news-time-icon-wrapper">
+                    <svg class="news-time-icon">
+                        <use xlink:href="./img/sprite.svg#sand-glass-icon"></use>
+                    </svg>                      
+                </div>
+  
+                <h2 class="news-header">Последние <span>новости</span></h2>
                 <div class="news-items-wrapper">
-                    <div class="news-item">
-                        <picture>
-                            <source srcset="./img/image-2.webp" type="image/webp">
-                                <img src="image-2.jpg" alt="">
-                        </picture>
-                    </div>
-                    <div class="news-item">
-                        <picture>
-                            <source srcset="./img/image-2.webp" type="image/webp">
-                        </picture>
-                    </div>
-                    <div class="news-item">
-                        <picture>
-                            <source srcset="./img/image-2.webp" type="image/webp">
-                        </picture>
-                    </div>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
+                    <a href="">
+                        <article class="news-item">
+                            <picture>
+                                <source srcset="./img/image-2.webp" type="image/webp">
+                                    <img src="image-2.jpg" alt="">
+                            </picture>
+                            <div class="news-item-inner">
+                                <h3 class="news-item-header">Оглавление статьи</h3>
+                                <p class="news-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <div class="publication-info">
+                                    <span class="news-item-autor-name">Автор текста</span>
+                                    <time class="news-item-publ-date" datetime="">15 авг 2020</time>                        
+                                </div>                            
+                            </div>
+                        </article>
+                    </a>
                 </div>
+                <button class="btn-more-news-items">Читать</button>
             </section>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
-            <p class="advantages-item-text">Advantage</p>
+            <footer class="footer" data-aos="fade-up">
+                <!-- <svg class="large-red-spot">
+                    <use xlink:href="./img/sprite.svg#large-red-spot"></use>
+                </svg> -->
+                <form action="" >
+                        <section class="users-personal-info">
+                            <h2 class="user-personal-info-header">Получить консультацию</h2>
+                            <p class="user-personal-info-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                            <input type="text" class="users-personal-info-input" placeholder="Ваше имя">
+                            <input type="text" class="users-personal-info-input" placeholder="Ваш email">
+                            <textarea class="users-personal-info-text-area" placeholder="Ваше сообщение"></textarea>
+                            <button class="btn-send-users-personal-info">Отправить</button>
+                        </section>
+                        <section class="subscribe">
+                            <div class="subscribe-inner">
+                                <div class="subscribe-item">
+                                    <span>Рабочие часы</span>
+                                    <div class="subscribe-item-wrapper">
+                                        <svg class="form-subscribe-icon">
+                                            <use xlink:href="./img/sprite.svg#circle-glass"></use>
+                                        </svg>
+                                        <span>Пн-пт (08:00 - 20:00)</span>
+                                    </div>
+                                </div>
+                                <div class="subscribe-item">
+                                    <span>Можете записаться по звонку</span>
+                                   
+                                        <div class="subscribe-item-wrapper">
+                                            <svg class="form-subscribe-icon">
+                                                <use xlink:href="./img/sprite.svg#form-phone-icon"></use>
+                                            </svg>
+                                            <a href="tel:+33-33-33-33-33"><span>+7-444-444-44</span></a>
+                                            
+                                        </div>
+                                  
+                                </div>
 
+                                <div class="subscribe-item">
+                                    <span>Или написать на email</span>
+                                        <div class="subscribe-item-wrapper">
+                                            <svg class="form-subscribe-icon">
+                                                <use xlink:href="./img/sprite.svg#form-email-icon"></use>
+                                            </svg>
+                                            <a href="mailto:kalamala@icon.org"><span>hawdy@ho.druzya</span></a>                                
+                                            
+                                        </div>
+                                </div>
+
+                                <div class="email-subscribe">
+                                    <input type="text" class="email-subcribe-input" placeholder="Ваш Email">
+                                    <button class="email-subscribe-btn">Подписаться</button>
+                                </div>
+                            </div>
+                        </section>
+                    
+                </form>
+                    <section class="soc-network">
+                        <h2 class="soc-network-header">Социальные сети</h2>
+                        <div class="soc-network-wrapper">
+                            <a href="#">
+                                <svg class="soc-network-item">
+                                    <use xlink:href="./img/sprite.svg#instagram-icon"></use>
+                                </svg>                        
+                            </a>
+
+                            <a href="#">
+                                <svg class="soc-network-item">
+                                    <use xlink:href="./img/sprite.svg#vkontakte-icon"></use>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg class="soc-network-item">
+                                    <use xlink:href="./img/sprite.svg#telegram-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="site-info">        
+                            <span>Copyright @2020 gayboy</span>
+                            <span>Privacy Police</span>
+                    </section>
+            </footer>
     </main>
+    <script src="aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
