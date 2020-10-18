@@ -1,10 +1,11 @@
 @import "reset.css";
-
+*{
+    z-index: 1;
+}
 body{
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    
 }
 a {
     text-decoration: none;
@@ -16,19 +17,117 @@ section{
 main{
     overflow: hidden;
 }
-.burger-menu{
+.overlay{
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 9997;
 }
-.burger-line{
-    width: 30px;
-    height: 5px;
-    background-color: red;
+.overlay-active{
     display: block;
+}
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 2000px;
+    z-index: 9998;
+    background-color: #fff;
+    padding-top: 35px;
+    padding-left: 30px;
+    transition: all .3s;
+}
+.mobile-menu-active{
+    right: 0;
+}
+.mobile-menu ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.mobile-menu ul a{
+    text-decoration: none;
+    color: #910002;
+    font-size: 20px
+}
+.mobile-menu ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.burger-wrapper{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    z-index: 99999;
+}
+.menu-icon {
+    display: block;
+    font-size: 0;
+    background: none;
+    width: 30px;
+    height: 25px;
     position: relative;
+    cursor: pointer;
+    
 }
-  .burger-line:not(:last-child){
-    margin-bottom: 3px;
+   
+.menu-icon,
+.menu-icon:before,
+.menu-icon:after {
+    border-top: 4px solid #910002;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+     transition: all .3s;
 }
+   
+.menu-icon:before,
+.menu-icon:after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+}
+   
+.menu-icon:before {
+top: 5px;
+}
+   
+.menu-icon:after {
+    top: 15px;
+}
+.opened {
+    border-top-color: transparent;
+    top: -35px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+ 
+.menu-icon.opened:after {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 12px;
+}
+ 
+.menu-icon.opened:before {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 12px;
+}
+/* fdsdsfds */
 .main-wrapper {
     width: 1115px;
     margin: 0 auto;
@@ -129,7 +228,7 @@ main{
 .contact-info .contact-item-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .contact-info .contact-item-wrapper:first-child{
     margin-bottom: 20px;
@@ -227,9 +326,9 @@ main{
     position: absolute;
     width: 580px;
     height: 545px;
-    top: 200px;
-    right: -260px;
-    opacity: 0.44;
+    top: 450px;
+    right: -300px;
+    /* opacity: 0.44; */
 }
 .about-me-wrapper{
     max-width: 960px;
@@ -498,8 +597,9 @@ main{
     transform: translateY(-150px);
     display: flex;
     flex-direction: row;
-    
+    position: relative;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 999;
 }
 .users-personal-info{
     max-width: 575px;
@@ -722,6 +822,15 @@ main{
     color: #F7F8FA;
 
 }
+.large-red-spot-foot{
+    top: -120px;
+    left: -120px;
+    width: 580px;
+    height: 545px;
+    opacity: 0.44;
+    position: absolute;
+    z-index: -1;
+}
 @media (max-width: 1400px){
     .about-me-decor{
         display: block;
@@ -733,6 +842,9 @@ main{
     }
 }
 @media (max-width: 1160px){
+    .large-red-spot-foot{
+        display: none;
+    }
     .news-items-wrapper{
         max-width: 737px;
         grid-template-columns: repeat(2, 355px);
@@ -761,10 +873,15 @@ main{
         margin: 50px 30px 0 30px;
     }
     .soc-network{
-        max-width: 270px;
+        max-width: 485px;
         text-align: start;
         margin-top: -100px;
         padding: 0;
+    }
+}
+@media (max-width: 1190px){
+    .large-red-spot{
+        display: none;
     }
 }
 @media (max-width: 1140px){
@@ -794,19 +911,26 @@ main{
         padding-bottom: 100px;
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 1030px){
     .main-header nav{
         display: none;
     }
     .contact-info{
         max-width: 600px;
-        margin-left: auto;
+        margin-left: 15px;
         flex-direction: row;
+        justify-content: flex-start;
         margin-right: 20px;
     }
     .contact-info .contact-item-wrapper:first-child{
         margin: 0 20px 0 0;
     }
+    .burger-wrapper{
+        display: block;
+    }
+}
+@media (max-width: 1000px){
+
     .burger-menu{
         display: block;
         position: absolute;
@@ -917,15 +1041,6 @@ main{
         margin-left: 15px;
         
     }
-    
-    .subscribe .email-subscribe{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .subscribe .email-subscribe .email-subscribe-btn{
-        margin-top: 30px;
-    }
 
     .more {
         padding-top: 160px;
@@ -935,6 +1050,18 @@ main{
     .more h1{
         font-size: 60px;
         line-height: normal;
+    }
+}
+@media (max-width: 530px){
+    .subscribe .email-subscribe{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .subscribe .email-subscribe .email-subscribe-btn{
+        margin-top: 30px;
+    }
+    .soc-network{
+        padding-left: 30px;
     }
 }
 @media (max-width: 480px){
@@ -970,33 +1097,16 @@ main{
         width: 290px;
     }
 }
-
+@media (max-width: 360px){
+    .burger-wrapper{
+        top: 10px;
+    }
+    .opened{
+        top: 0;
+    }
+}
 @media (max-width:340px){
     .email-subcribe-input{
         width: 240px;
-    }
-}
-[data-aos]{
-}
-@media only screen and (max-width : 768px) {
-    .animated {
-        /*CSS transitions*/
-        -o-transition-property: none !important;
-        -moz-transition-property: none !important;
-        -ms-transition-property: none !important;
-        -webkit-transition-property: none !important;
-        transition-property: none !important;
-        /*CSS transforms*/
-        -o-transform: none !important;
-        -moz-transform: none !important;
-        -ms-transform: none !important;
-        -webkit-transform: none !important;
-        transform: none !important;
-        /*CSS animations*/
-        -webkit-animation: none !important;
-        -moz-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-        animation: none !important;
     }
 }

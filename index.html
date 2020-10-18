@@ -6,7 +6,7 @@
     <title>Document</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="aos.css">
+    <link rel="stylesheet" href="./aos/aos.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -20,13 +20,8 @@
                 <li class="main-header-list-item"><a href="#">Контакты</a></li>
             </ul>
         </nav>
-        <div class="burger-menu">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-        </div>
+        
         <div class="contact-info">
-
             <div class="contact-item-wrapper">
                 <a href="tel:+33-33-33-33-33" class="content-info-item">+33-33-33-33-33</a>
                 <svg class="icon">
@@ -42,6 +37,19 @@
             </div>
         </div>
     </header>
+    <div class="burger-wrapper">
+        <span class="menu-icon" id="menuBtn"></span>
+    </div>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Обо мне</a></li>
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </div>
     <main>
             <section class="more">
                 <div class="main-wrapper" data-aos="fade-down">
@@ -52,9 +60,9 @@
             </section>
             
                 <section class="about-me">
-                    <!-- <svg class="large-red-spot">
+                    <svg class="large-red-spot">
                         <use xlink:href="./img/sprite.svg#large-red-spot"></use>
-                    </svg> -->
+                    </svg>
                         <div class="adv-wrapper">
                             <div class="advantages">
                                 <div class="advantages-item-wrapper">
@@ -264,10 +272,10 @@
                 <button class="btn-more-news-items">Читать</button>
             </section>
             <footer class="footer" data-aos="fade-up">
-                <!-- <svg class="large-red-spot">
-                    <use xlink:href="./img/sprite.svg#large-red-spot"></use>
-                </svg> -->
-                <form action="" >
+                <form action="">
+                    <svg class="large-red-spot-foot">
+                        <use xlink:href="./img/sprite.svg#large-red-spot"></use>
+                    </svg>
                         <section class="users-personal-info">
                             <h2 class="user-personal-info-header">Получить консультацию</h2>
                             <p class="user-personal-info-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
@@ -346,9 +354,7 @@
                     </section>
             </footer>
     </main>
-    <script src="aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="./aos/aos.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
