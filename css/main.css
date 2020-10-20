@@ -54,7 +54,7 @@ main{
     padding: 0;
     margin: 0;
 }
-.mobile-menu ul a{
+.scroll-item-mob{
     text-decoration: none;
     color: #910002;
     font-size: 20px
@@ -169,7 +169,7 @@ top: 5px;
     line-height: 26px;
     letter-spacing: 0.08em;
 }
-.main-header-list-item a{
+.main-header-list-item{
     text-decoration: none;
     color: #F7F8FA;
     
@@ -592,12 +592,12 @@ top: 5px;
 }
 
 .footer form{
+    display: block;
     max-width: 1120px;
     margin: 0 auto;
     transform: translateY(-150px);
     display: flex;
     flex-direction: row;
-    position: relative;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 999;
 }

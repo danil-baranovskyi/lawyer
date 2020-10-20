@@ -13,11 +13,11 @@
     <header class="main-header">
         <nav>
             <ul class="main-header-list">
-                <li class="main-header-list-item"><a href="#">Главная</a></li>
-                <li class="main-header-list-item"><a href="#">Обо мне</a></li>
-                <li class="main-header-list-item"><a href="#">Услуги</a></li>
-                <li class="main-header-list-item"><a href="#">Новости</a></li>
-                <li class="main-header-list-item"><a href="#">Контакты</a></li>
+                <li class="main-header-list-item scroll-item">Главная</li>
+                <li class="main-header-list-item scroll-item">Обо мне</li>
+                <li class="main-header-list-item scroll-item">Услуги</li>
+                <li class="main-header-list-item scroll-item">Новости</li>
+                <li class="main-header-list-item scroll-item">Контакты</li>
             </ul>
         </nav>
         
@@ -43,11 +43,11 @@
     <div class="overlay"></div>
     <div class="mobile-menu">
         <ul>
-            <li><a href="">Главная</a></li>
-            <li><a href="">Обо мне</a></li>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Контакты</a></li>
+            <li class="scroll-item-mob">Главная</li>
+            <li class="scroll-item-mob">Обо мне</li>
+            <li class="scroll-item-mob">Услуги</li>
+            <li class="scroll-item-mob">Новости</li>
+            <li class="scroll-item-mob">Контакты</li>
         </ul>
     </div>
     <main>
@@ -269,64 +269,66 @@
                         </article>
                     </a>
                 </div>
-                <button class="btn-more-news-items">Читать</button>
+                <button class="btn-more-news-items b">Читать</button>
             </section>
             <footer class="footer" data-aos="fade-up">
-                <form action="">
-                    <svg class="large-red-spot-foot">
-                        <use xlink:href="./img/sprite.svg#large-red-spot"></use>
-                    </svg>
-                        <section class="users-personal-info">
-                            <h2 class="user-personal-info-header">Получить консультацию</h2>
-                            <p class="user-personal-info-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
-                            <input type="text" class="users-personal-info-input" placeholder="Ваше имя">
-                            <input type="text" class="users-personal-info-input" placeholder="Ваш email">
-                            <textarea class="users-personal-info-text-area" placeholder="Ваше сообщение"></textarea>
-                            <button class="btn-send-users-personal-info">Отправить</button>
-                        </section>
-                        <section class="subscribe">
-                            <div class="subscribe-inner">
-                                <div class="subscribe-item">
-                                    <span>Рабочие часы</span>
-                                    <div class="subscribe-item-wrapper">
-                                        <svg class="form-subscribe-icon">
-                                            <use xlink:href="./img/sprite.svg#circle-glass"></use>
-                                        </svg>
-                                        <span>Пн-пт (08:00 - 20:00)</span>
+                <div class="scroll-footer"></div>
+                    <form action="" class="form">
+                        <svg class="large-red-spot-foot">
+                            <use xlink:href="./img/sprite.svg#large-red-spot"></use>
+                        </svg>
+                            <section class="users-personal-info">
+                                <h2 class="user-personal-info-header">Получить консультацию</h2>
+                                <p class="user-personal-info-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+                                <input type="text" class="users-personal-info-input" placeholder="Ваше имя">
+                                <input type="text" class="users-personal-info-input" placeholder="Ваш email">
+                                <textarea class="users-personal-info-text-area" placeholder="Ваше сообщение"></textarea>
+                                <button class="btn-send-users-personal-info">Отправить</button>
+                            </section>
+                            <section class="subscribe">
+                                <div class="subscribe-inner">
+                                    <div class="subscribe-item">
+                                        <span>Рабочие часы</span>
+                                        <div class="subscribe-item-wrapper">
+                                            <svg class="form-subscribe-icon">
+                                                <use xlink:href="./img/sprite.svg#circle-glass"></use>
+                                            </svg>
+                                            <span>Пн-пт (08:00 - 20:00)</span>
+                                        </div>
+                                    </div>
+                                    <div class="subscribe-item">
+                                        <span>Можете записаться по звонку</span>
+                                    
+                                            <div class="subscribe-item-wrapper">
+                                                <svg class="form-subscribe-icon">
+                                                    <use xlink:href="./img/sprite.svg#form-phone-icon"></use>
+                                                </svg>
+                                                <a href="tel:+33-33-33-33-33"><span>+7-444-444-44</span></a>
+                                                
+                                            </div>
+                                    
+                                    </div>
+
+                                    <div class="subscribe-item">
+                                        <span>Или написать на email</span>
+                                            <div class="subscribe-item-wrapper">
+                                                <svg class="form-subscribe-icon">
+                                                    <use xlink:href="./img/sprite.svg#form-email-icon"></use>
+                                                </svg>
+                                                <a href="mailto:kalamala@icon.org"><span>hawdy@ho.druzya</span></a>                                
+                                                
+                                            </div>
+                                    </div>
+
+                                    <div class="email-subscribe">
+                                        <input type="text" class="email-subcribe-input" placeholder="Ваш Email">
+                                        <button class="email-subscribe-btn">Подписаться</button>
                                     </div>
                                 </div>
-                                <div class="subscribe-item">
-                                    <span>Можете записаться по звонку</span>
-                                   
-                                        <div class="subscribe-item-wrapper">
-                                            <svg class="form-subscribe-icon">
-                                                <use xlink:href="./img/sprite.svg#form-phone-icon"></use>
-                                            </svg>
-                                            <a href="tel:+33-33-33-33-33"><span>+7-444-444-44</span></a>
-                                            
-                                        </div>
-                                  
-                                </div>
-
-                                <div class="subscribe-item">
-                                    <span>Или написать на email</span>
-                                        <div class="subscribe-item-wrapper">
-                                            <svg class="form-subscribe-icon">
-                                                <use xlink:href="./img/sprite.svg#form-email-icon"></use>
-                                            </svg>
-                                            <a href="mailto:kalamala@icon.org"><span>hawdy@ho.druzya</span></a>                                
-                                            
-                                        </div>
-                                </div>
-
-                                <div class="email-subscribe">
-                                    <input type="text" class="email-subcribe-input" placeholder="Ваш Email">
-                                    <button class="email-subscribe-btn">Подписаться</button>
-                                </div>
-                            </div>
-                        </section>
-                    
-                </form>
+                            </section>
+                        
+                    </form>
+            
                     <section class="soc-network">
                         <h2 class="soc-network-header">Социальные сети</h2>
                         <div class="soc-network-wrapper">
